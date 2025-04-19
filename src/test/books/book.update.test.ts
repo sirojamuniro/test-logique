@@ -8,9 +8,9 @@ jest.mock("../../modules/book/services");
 
 const app: Application = express();
 app.use(express.json());
-app.patch("/api/v1/books/:id", updateBookController);
+app.put("/api/v1/books/:id", updateBookController);
 
-describe("PATCH /api/v1/books/:id - updateBookController", () => {
+describe("put /api/v1/books/:id - updateBookController", () => {
     beforeEach(() => {
         (updateBookService as jest.Mock).mockReset();
     });
@@ -28,7 +28,7 @@ describe("PATCH /api/v1/books/:id - updateBookController", () => {
 
         (updateBookService as jest.Mock).mockResolvedValue(mockResponse);
 
-        const response = await request(app).patch("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send(mockRequest);
+        const response = await request(app).put("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send(mockRequest);
 
         expect(response.status).toBe(200);
         expect(response.body).toEqual(mockResponse);
@@ -39,7 +39,7 @@ describe("PATCH /api/v1/books/:id - updateBookController", () => {
         const mockError = new Error("Something went wrong");
         (updateBookService as jest.Mock).mockRejectedValue(mockError);
 
-        const response = await request(app).patch("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send({
+        const response = await request(app).put("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send({
             title: "Updated Book",
         });
 
