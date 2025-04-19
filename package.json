@@ -1,0 +1,59 @@
+{
+  "name": "test-logique",
+  "version": "1.0.0",
+  "description": "create clean code for express js and typescript",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "rimraf dist && swc src -d dist --config-file .swcrc",
+    "start": "node dist/src/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:ci": "jest --ci --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirojamuniro/test-logique.git"
+  },
+  "keywords": [
+    "test-logique",
+    "express"
+  ],
+  "author": "Siroja Muniro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirojamuniro/test-logique/issues"
+  },
+  "homepage": "https://github.com/sirojamuniro/test-logique#readme",
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.33",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "pg": "^8.14.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.22"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.6.10",
+    "@swc/jest": "^0.2.37",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.1",
+    "@types/supertest": "^6.0.3",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "supertest": "^7.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-jest": "^29.3.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
