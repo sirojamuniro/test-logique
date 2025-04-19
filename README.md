@@ -2,7 +2,7 @@
 
 [![Node.js version](https://img.shields.io/badge/node-20+-blue.svg)](https://nodejs.org/)
 [![npm version](https://img.shields.io/npm/v/test-logique)](https://www.npmjs.com/package/test-logique)
-[![Docker Pulls](https://img.shields.io/docker/pulls/your_dockerhub_user/your_image_name.svg)](https://hub.docker.com/r/your_dockerhub_user/your_image_name) "create clean code for express js and typescript" (Deskripsi dari package.json)
+[![Docker Pulls](https://img.shields.io/docker/pulls/your_dockerhub_user/your_image_name.svg)](https://hub.docker.com/r/your_dockerhub_user/your_image_name)
 
 ## Teknologi yang Digunakan
 
@@ -161,8 +161,6 @@ Untuk menjalankan test menggunakan Jest:
     # yarn run test:cov
     ```
 
-Pastikan file `jest.config.js`, `tsconfig.json`, dan file setup test (`test/jest.setup.ts`) dikonfigurasi dengan benar agar test berjalan di lingkungan TypeScript dengan mock yang tepat.
-
 ## Proses Build
 
 Aplikasi ini menggunakan SWC untuk kompilasi. Script build didefinisikan di `package.json`:
@@ -175,7 +173,7 @@ npm run build
 
 ## Uji API dengan Postman
 
-Anda dapat menguji endpoint API yang disediakan menggunakan aplikasi Postman. Kami menyediakan Postman collection yang berisi contoh request untuk beberapa endpoint.
+Anda dapat menguji endpoint API yang disediakan menggunakan aplikasi Postman. Saya menyediakan Postman collection yang berisi contoh request untuk beberapa endpoint.
 
 1.  **Download Postman:** Jika Anda belum memiliki Postman, unduh dan instal dari [situs resmi Postman](https://www.postman.com/downloads/).
 2.  **Unduh Collection:** Pastikan Anda memiliki file `LOGIQUE.postman_collection.json` dari repositori proyek ini.
