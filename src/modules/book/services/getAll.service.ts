@@ -10,7 +10,6 @@ export async function listBookService(
 ): Promise<ListResponseBook> {
     const {
         publishedYear,
-        genres,
         skip = 0,
         take = 10,
         withDeleted,
@@ -20,25 +19,18 @@ export async function listBookService(
         search,
     } = params;
 
-    console.log('params', params);
-
     const where: any[] = [];
 
     if (search) {
         where.push(
             { title: ILike(`%${search}%`) },
-            { author: ILike(`%${search}%`) }
+            { author: ILike(`%${search}%`) },
+            { genres: ArrayOverlap([search]) }
         );
     }
 
     if (publishedYear) {
         where.push({ publishedYear });
-    }
-    if (genres) {
-        const newGenres = typeof genres === 'string'
-            ? genres.split(',').map(g => g.trim())
-            : genres;
-        where.push({ genres: ArrayOverlap(newGenres) });
     }
 
     const [data, count] = await bookRepo.findAndCount({

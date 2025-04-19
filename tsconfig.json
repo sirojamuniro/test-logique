@@ -10,15 +10,14 @@
       "esModuleInterop": true,
       "types": ["jest", "node"]
     },
+
     "include": [
-      "src/**/*.ts",
-      "src/test/**/*.ts"
+      "src/**/*.ts",     
+      "src/test/**/*.ts"  
     ],
     "exclude": [
       "node_modules",
       "dist",
-      // "**/*.test.ts",
-      // "**/*.spec.ts",
       "jest.config.js"
     ]
   }

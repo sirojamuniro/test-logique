@@ -12,7 +12,6 @@ export const ListBookRequestSchema = Type.Intersect([
             minimum: 0,
             errorMessage: 'PublishedYear must be a non-negative integer',
         })),
-        genres: Type.Optional(Type.String()),
     }, { additionalProperties: true }),
 ]);
 export type ListRequestBook = Static<typeof ListBookRequestSchema>;

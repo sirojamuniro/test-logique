@@ -9,7 +9,7 @@ dotenv.config();
 const dblog: boolean = process.env.DB_LOG == "true" || false;
 const dbsync: boolean = process.env.DB_SYNC == "true" || false;
 const dbOptions: DataSourceOptions = {
-    host: process.env.DB_HOST || "localhost",
+    host: process.env.DB_HOST || "db",
     port: Number(process.env.DB_PORT) || 5432,
     type: "postgres",
     database: process.env.DB_NAME || "logique",

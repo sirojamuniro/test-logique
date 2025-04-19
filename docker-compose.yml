@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: logique_production
+      DB_USER: logique_production_postgres
+      DB_PASSWORD: logique_@123
+      DB_LOG: false
+      DB_SYNC: true
+      DB_POOL_SIZE: 10
+    env_file:
+      - .env.production
+    depends_on:
+      db:
+         condition: service_healthy
+
+  db:
+    image: postgres:17-alpine
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: logique_production
+      POSTGRES_USER: logique_production_postgres
+      POSTGRES_PASSWORD: logique_@123
+    env_file:
+      - .env.production
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
