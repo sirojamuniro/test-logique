@@ -24,8 +24,8 @@ describe("GET /api/v1/books - listBookController", () => {
         const mockResponse: ListResponseBook = {
             message: "Book list retrieved successfully",
             data: [
-                { id: "1", title: "Book Title 1", author: "Author 1", publishedYear: 2021, genres: ["fiction", "adventure"], stock: 10 }, // Tambahkan properti entity yang hilang
-                { id: "2", title: "Book Title 2", author: "Author 2", publishedYear: 2020, genres: ["comedy", "drama"], stock: 5 }, // Tambahkan properti entity yang hilang
+                { id: "1", title: "Book Title 1", author: "Author 1", publishedYear: 2021, genres: ["fiction", "adventure"], stock: 10 },
+                { id: "2", title: "Book Title 2", author: "Author 2", publishedYear: 2020, genres: ["comedy", "drama"], stock: 5 },
             ],
             Pagination: { skip: 0, take: 10, count: 2 },
         };
