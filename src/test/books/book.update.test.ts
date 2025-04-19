@@ -23,23 +23,23 @@ describe("PATCH /api/v1/books/:id - updateBookController", () => {
 
         const mockResponse = {
             message: "Book updated successfully",
-            data: { id: "1", ...mockRequest },
+            data: { id: "39141a56-c5bd-48e4-a542-eab9dee3431f", ...mockRequest },
         };
 
         (updateBookService as jest.Mock).mockResolvedValue(mockResponse);
 
-        const response = await request(app).patch("/api/v1/books/1").send(mockRequest);
+        const response = await request(app).patch("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send(mockRequest);
 
         expect(response.status).toBe(200);
         expect(response.body).toEqual(mockResponse);
-        expect(updateBookService).toHaveBeenCalledWith({ id: "1" }, mockRequest);
+        expect(updateBookService).toHaveBeenCalledWith({ id: "39141a56-c5bd-48e4-a542-eab9dee3431f" }, mockRequest);
     });
 
     it("should return 500 if service throws an error", async () => {
         const mockError = new Error("Something went wrong");
         (updateBookService as jest.Mock).mockRejectedValue(mockError);
 
-        const response = await request(app).patch("/api/v1/books/1").send({
+        const response = await request(app).patch("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f").send({
             title: "Updated Book",
         });
 

@@ -27,7 +27,7 @@ describe("POST /api/v1/books - createBookController", () => {
 
         const mockResponse: CreateResponseBook = {
             message: "Book created successfully",
-            data: { id: "1", ...mockRequest },
+            data: { id: "39141a56-c5bd-48e4-a542-eab9dee3431f", ...mockRequest },
         };
 
         (createBookService as jest.Mock).mockResolvedValue(mockResponse);

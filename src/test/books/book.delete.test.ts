@@ -22,18 +22,18 @@ describe("DELETE /api/v1/books/:id - deleteBookController", () => {
 
         (deleteBookService as jest.Mock).mockResolvedValue(mockResponse);
 
-        const response = await request(app).delete("/api/v1/books/1");
+        const response = await request(app).delete("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f");
 
         expect(response.status).toBe(200);
         expect(response.body).toEqual(mockResponse);
-        expect(deleteBookService).toHaveBeenCalledWith({ id: "1" });
+        expect(deleteBookService).toHaveBeenCalledWith({ id: "39141a56-c5bd-48e4-a542-eab9dee3431f" });
     });
 
     it("should return 500 if service throws an error", async () => {
         const mockError = new Error("Something went wrong");
         (deleteBookService as jest.Mock).mockRejectedValue(mockError);
 
-        const response = await request(app).delete("/api/v1/books/1");
+        const response = await request(app).delete("/api/v1/books/39141a56-c5bd-48e4-a542-eab9dee3431f");
 
         expect(response.status).toBe(500);
     });
