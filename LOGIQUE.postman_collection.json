@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "42ebf495-0ed9-47d6-86ba-016312c238e5",
+		"name": "LOGIQUE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24899736"
+	},
+	"item": [
+		{
+			"name": "List Books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/books?search=tamako&genres=komedi,science&publishedYear=1997&order=publishedYear&orderType=DESC",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "tamako"
+						},
+						{
+							"key": "genres",
+							"value": "komedi,science"
+						},
+						{
+							"key": "publishedYear",
+							"value": "1997"
+						},
+						{
+							"key": "order",
+							"value": "publishedYear"
+						},
+						{
+							"key": "orderType",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/v1/books?search=tamako&genres=komedi,science&publishedYear=1997&order=publishedYear&orderType=DESC",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"books"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "tamako"
+								},
+								{
+									"key": "genres",
+									"value": "komedi,science"
+								},
+								{
+									"key": "publishedYear",
+									"value": "1997"
+								},
+								{
+									"key": "order",
+									"value": "publishedYear"
+								},
+								{
+									"key": "orderType",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "89"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 09:31:40 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1745055817"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "883"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"373-+z/PcS96Xh8j9c2hOuaidrgtdwk\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book list retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"cfc2fab0-ce67-460e-82dc-86f24be02c81\",\n            \"title\": \"Menggunakan fiksi dengan benar\",\n            \"author\": \"tamako\",\n            \"publishedYear\": 1998,\n            \"genres\": [\n                \"komedi\",\n                \"fiction\"\n            ],\n            \"stock\": 20,\n            \"createdAt\": \"2025-04-19T09:08:08.203Z\",\n            \"updatedAt\": \"2025-04-19T09:08:08.203Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": \"400c0bb4-a20d-428d-8661-299ee38c922d\",\n            \"title\": \"Menggunakan fiksi dengan benar\",\n            \"author\": \"kyama\",\n            \"publishedYear\": 1997,\n            \"genres\": [\n                \"komedi\",\n                \"science\"\n            ],\n            \"stock\": 20,\n            \"createdAt\": \"2025-04-19T09:09:16.550Z\",\n            \"updatedAt\": \"2025-04-19T09:09:16.550Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": \"a9cb7deb-a25a-4aa1-a6da-809d895ba6cb\",\n            \"title\": \"Menggunakan fiksi dengan benar\",\n            \"author\": \"tadaro\",\n            \"publishedYear\": 1997,\n            \"genres\": [\n                \"science\",\n                \"bebas\"\n            ],\n            \"stock\": 20,\n            \"createdAt\": \"2025-04-19T09:09:41.564Z\",\n            \"updatedAt\": \"2025-04-19T09:09:41.564Z\",\n            \"deletedAt\": null\n        }\n    ],\n    \"Pagination\": {\n        \"skip\": 0,\n        \"take\": 10,\n        \"count\": 3\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"title\": \"Menggunakan titah dengan benar\",\n \"author\": \"kitaro\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"science\"],\n \"stock\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/books"
+			},
+			"response": [
+				{
+					"name": "Create Books",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"title\": \"Menggunakan titah dengan benar\",\n \"author\": \"kitaro\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"sciend\"],\n \"stock\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 08:11:18 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1745051179"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "307"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"133-mIxpjy69okXSlQxvnh7BAgKXGFw\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book created successfully\",\n    \"data\": {\n        \"id\": \"df3c66e4-4d7e-41f5-ae3d-3adee7dbb414\",\n        \"title\": \"Menggunakan titah dengan benar\",\n        \"author\": \"kitaro\",\n        \"publishedYear\": 1997,\n        \"genres\": [\n            \"komedi\",\n            \"sciend\"\n        ],\n        \"stock\": 20,\n        \"createdAt\": \"2025-04-19T08:11:18.124Z\",\n        \"updatedAt\": \"2025-04-19T08:11:18.124Z\",\n        \"deletedAt\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+			},
+			"response": [
+				{
+					"name": "Update Books",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "98"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 11:30:52 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1745063145"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "307"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"133-QMOlMDE/cMpt8fEB6uhd5PrpNAQ\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book updated successfully\",\n    \"data\": {\n        \"id\": \"400c0bb4-a20d-428d-8661-299ee38c922d\",\n        \"title\": \"Menggunakan sasa dengan benar\",\n        \"author\": \"tamako\",\n        \"publishedYear\": 1997,\n        \"genres\": [\n            \"komedi\",\n            \"fiction\"\n        ],\n        \"stock\": 20,\n        \"createdAt\": \"2025-04-19T09:09:16.550Z\",\n        \"updatedAt\": \"2025-04-19T11:30:52.680Z\",\n        \"deletedAt\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get By Id Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+			},
+			"response": [
+				{
+					"name": "Get By Id Books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 11:31:49 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1745063210"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13c-fe3rTz9fARIhndFEAbWJ9EUrBzM\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book retrieved detail successfully\",\n    \"data\": {\n        \"id\": \"400c0bb4-a20d-428d-8661-299ee38c922d\",\n        \"title\": \"Menggunakan sasa dengan benar\",\n        \"author\": \"tamako\",\n        \"publishedYear\": 1997,\n        \"genres\": [\n            \"komedi\",\n            \"fiction\"\n        ],\n        \"stock\": 20,\n        \"createdAt\": \"2025-04-19T09:09:16.550Z\",\n        \"updatedAt\": \"2025-04-19T11:30:52.680Z\",\n        \"deletedAt\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+			},
+			"response": [
+				{
+					"name": "Delete Books",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"title\": \"Menggunakan sasa dengan benar\",\n \"author\": \"tamako\",\n \"publishedYear\": 1997,\n \"genres\": [\"komedi\",\"fiction\"],\n \"stock\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books/400c0bb4-a20d-428d-8661-299ee38c922d"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 11:33:12 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1745063293"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "329"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"149-OIeeKwH/nnvFM/Ik0SY2u4Lz8GA\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book deleted successfully\",\n    \"data\": {\n        \"id\": \"400c0bb4-a20d-428d-8661-299ee38c922d\",\n        \"title\": \"Menggunakan sasa dengan benar\",\n        \"author\": \"tamako\",\n        \"publishedYear\": 1997,\n        \"genres\": [\n            \"komedi\",\n            \"fiction\"\n        ],\n        \"stock\": 20,\n        \"createdAt\": \"2025-04-19T09:09:16.550Z\",\n        \"updatedAt\": \"2025-04-19T11:33:12.783Z\",\n        \"deletedAt\": \"2025-04-19T11:33:12.783Z\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
