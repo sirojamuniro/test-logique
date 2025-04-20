@@ -1,6 +1,7 @@
 import { Static, Type, TSchema } from "@sinclair/typebox";
 
 export const BaseResponseSchema = Type.Object({
+    success: Type.Boolean(),
     message: Type.String(),
 });
 export type ResponseBase = Static<typeof BaseResponseSchema>;

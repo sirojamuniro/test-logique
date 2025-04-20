@@ -17,6 +17,7 @@ describe("GET /api/v1/books/:id - detailBookController", () => {
 
     it("should return a book by ID with status 200", async () => {
         const mockResponse = {
+            success: true,
             message: "Book retrieved successfully",
             data: {
                 id: "39141a56-c5bd-48e4-a542-eab9dee3431f",

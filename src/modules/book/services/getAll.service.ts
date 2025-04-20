@@ -49,6 +49,7 @@ export async function listBookService(
     });
 
     const response: ListResponseBook = {
+        success: true,
         message: 'Book list retrieved successfully',
         data,
         Pagination: {

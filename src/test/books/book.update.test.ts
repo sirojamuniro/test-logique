@@ -22,6 +22,7 @@ describe("put /api/v1/books/:id - updateBookController", () => {
         };
 
         const mockResponse = {
+            success: true,
             message: "Book updated successfully",
             data: { id: "39141a56-c5bd-48e4-a542-eab9dee3431f", ...mockRequest },
         };
@@ -44,5 +45,6 @@ describe("put /api/v1/books/:id - updateBookController", () => {
         });
 
         expect(response.status).toBe(500);
+
     });
 });

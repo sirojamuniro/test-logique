@@ -6,6 +6,8 @@ import { json } from 'body-parser';
 import ormConfig from './config/data-source';
 import dotenv from 'dotenv';
 import routes from '../src/routes';
+import { notFoundHandler } from './middlewares/notFoundHandler';
+import errorHandler from './middlewares/errorHandler';
 
 dotenv.config();
 const app = express();
@@ -36,10 +38,10 @@ app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 // Routes
 app.use(routes);
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    res.statusCode = 500;
-    res.end((res as any).sentry + "\n");
-});
+app.use(notFoundHandler);
+
+// 4. Middleware Error Handler Utama (PALING AKHIR)
+app.use(errorHandler);
 
 const port = parseInt(process.env.PORT || '3000', 10);
 const ip = process.env.IP || '0.0.0.0';

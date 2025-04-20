@@ -22,6 +22,7 @@ describe("GET /api/v1/books - listBookController", () => {
     it("should return a list of books with status 200", async () => {
 
         const mockResponse: ListResponseBook = {
+            success: true,
             message: "Book list retrieved successfully",
             data: [
                 { id: "1", title: "Book Title 1", author: "Author 1", publishedYear: 2021, genres: ["fiction", "adventure"], stock: 10 },

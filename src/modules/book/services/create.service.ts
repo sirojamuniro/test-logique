@@ -11,6 +11,7 @@ export async function createBookService(
     const saved = await bookRepo.save(newBook);
 
     const response: CreateResponseBook = {
+        success: true,
         message: 'Book created successfully',
         data: saved,
     };

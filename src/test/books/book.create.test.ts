@@ -26,6 +26,7 @@ describe("POST /api/v1/books - createBookController", () => {
         };
 
         const mockResponse: CreateResponseBook = {
+            success: true,
             message: "Book created successfully",
             data: { id: "39141a56-c5bd-48e4-a542-eab9dee3431f", ...mockRequest },
         };

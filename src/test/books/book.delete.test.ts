@@ -17,6 +17,7 @@ describe("DELETE /api/v1/books/:id - deleteBookController", () => {
 
     it("should delete a book and return status 200", async () => {
         const mockResponse = {
+            success: true,
             message: "Book deleted successfully",
         };
 

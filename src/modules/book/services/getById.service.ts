@@ -29,6 +29,7 @@ export async function detailBookService(
     });
 
     const response: DetailResponseBook = {
+        success: true,
         message: 'Book retrieved detail successfully',
         data: book,
     };

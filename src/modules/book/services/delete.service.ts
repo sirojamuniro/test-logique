@@ -29,6 +29,7 @@ export async function deleteBookService(
     await bookRepo.softRemove(book);
 
     const response: BaseResponseCreate = {
+        success: true,
         message: 'Book deleted successfully',
         data: book,
     };

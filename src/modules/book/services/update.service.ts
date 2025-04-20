@@ -19,6 +19,7 @@ export async function updateBookService(
     const updatedBook = await bookRepo.save(book);
 
     const response: CreateResponseBook = {
+        success: true,
         message: 'Book updated successfully',
         data: updatedBook,
     };
